@@ -28,13 +28,11 @@ public class Recipe {
     }
 
     public void removeIngredient(String n){
-        Ingredient current= null;
         for (int i = 0; i < ingredients.size() ; i++) {
-            if(current.getName().equals(n)) {
-                current = ingredients.get(i);
+            if(ingredients.get(i).getName().equals(n)) {
+                ingredients.remove(ingredients.get(i));
             }
         }
-        ingredients.remove(current);
     }
 
     public LinkedList<Ingredient> getIngredients(){
